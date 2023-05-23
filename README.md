@@ -1,3 +1,14 @@
+API Changes to Godot 4.
+<ul>
+  <li>Reference to RefCounted</li>
+  <li>@warning_ignore() in place of #warning-ignore</li>
+    <ul>
+      <li>Some warnings remain</li>
+    </ul>
+  <li>@warning_ignore("native_method_override") for get_class() & is_class()</li>
+  <li>Hack for using constants as static variables no longer works in Godot 4.0.x. Temporarily replaced as instance variables, while looking for a solution. This impacts postfixes_aa and other.</li>
+</ul>
+
 # GodotBigNumberClass
 
 Use very BIG numbers in Godot Engine games.
@@ -6,7 +17,7 @@ It supports very big numbers, with hundreds of digits so very useful in an idle 
 
 ## Setup
 
-The easiest way to use this class is to preload it in a file that is set as [AutoLoad](https://docs.godotengine.org/en/stable/getting_started/step_by_step/singletons_autoload.html) in your project, as Big.gd cannot be used as AutoLoad itself as of Godot 3.3.4.
+The easiest way to use this class is to preload it in a file that is set as [AutoLoad](https://docs.godotengine.org/en/stable/getting_started/step_by_step/singletons_autoload.html) in your project, as Big.gd cannot be used as AutoLoad itself in Godot 4.0.x.
 
 e.g. In a file named Global.gd, autoloaded in your project:
 
